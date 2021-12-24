@@ -1,0 +1,264 @@
+/* Global */
+:root {
+  /* Colour */
+  --color-white: #ffffff;
+  --color-black: #140a00;
+  --color-blue: #045fd4;
+  --color-red: #ff0000;
+  --color-light-grey: #e0e0e0;
+  --color-dark-grey: #909090;
+
+  /* Size */
+  --size-padding: 12px;
+  --size-avatar-size: 36px;
+
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+/* Universal */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  cursor: default;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--size-padding);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+header .logo {
+  font-size: var(--font-large);
+}
+
+header .logo i {
+  color: var(--color-red);
+}
+
+header .icons button {
+  color: var(--color-white);
+}
+
+/* Video Player */
+.player {
+  /* When scrolling down, put the video on top - sticky or fixed */
+  position: sticky;
+  /* When position is not static (default), set up the position */
+  top: 0;
+  /* Put the "item" in the center */
+  text-align: center;
+  background-color: var(--color-black);
+}
+
+.player video {
+  /* The best way to make "items" responsive is to use % */
+  width: 100%;
+  height: 100%;
+  /* Limit the maximum size. Otherwise, the below content is shown by scrolling down */
+  max-width: 600px;
+}
+
+/* Video Info */
+.info {
+  padding: var(--size-padding);
+}
+
+.info .metadata .hashtags {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--color-blue);
+}
+
+.info .metadata .hashtags li {
+  margin-right: var(--size-padding);
+}
+
+.info .metadata .titleAndButton {
+  display: flex;
+}
+
+.info .metadata .titleAndButton .title {
+  font-size: var(--font-medium);
+  margin-right: var(--size-padding);
+}
+
+.info .metadata .titleAndButton .title.clamp {
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.info .metadata .titleAndButton .moreBtn {
+  height: 100%;
+}
+
+.info .metadata .titleAndButton .moreBtn.clicked {
+  transform: rotate(180deg);
+}
+
+.info .metadata .views {
+  font-size: var(--font-small);
+  color: var(--color-dark-grey);
+}
+
+/* Actions */
+.info .actions {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--size-padding) 0;
+}
+
+.info .actions button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-small);
+  color: var(--color-dark-grey);
+}
+
+.info .actions button i {
+  margin-bottom: calc(var(--size-padding) / 2);
+  font-size: 16px;
+}
+
+.info .actions button i.active {
+  color: var(--color-blue);
+}
+
+/* Channel Description */
+.info .channel {
+  display: flex;
+  justify-content: space-between;
+  /* Make a border line */
+  border-top: 1px solid var(--color-light-grey);
+  border-bottom: 1px solid var(--color-light-grey);
+  padding: var(--size-padding) 0;
+}
+
+.info .channel .metadata {
+  display: flex;
+  align-items: center;
+}
+
+.info .channel .metadata img {
+  /* To adjust the image size, use "width" & "height" */
+  width: var(--size-avatar-size);
+  height: var(--size-avatar-size);
+  border-radius: 50%;
+}
+
+.info .channel .metadata .channel__info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 var(--size-padding);
+}
+
+.info .channel .metadata .channel__info .name {
+  font-size: var(--font-medium);
+  margin-bottom: calc(var(--size-padding) / 2);
+}
+
+.info .channel .metadata .channel__info .subscribers {
+  font-size: var(--font-small);
+  color: var(--color-dark-grey);
+}
+
+.info .channel .subscribe {
+  /* Make Upper case */
+  text-transform: uppercase;
+  color: var(--color-red);
+  font-size: var(--font-medium);
+}
+
+/* Up Next */
+.upNext {
+  padding: 0 var(--size-padding);
+}
+
+/* The title class name is also used below, so use ">" to designate it only to the child node */
+.upNext > .title {
+  font-size: var(--font-medium);
+  color: var(--color-dark-grey);
+}
+
+.upNext .item {
+  display: flex;
+  margin-top: var(--size-padding);
+}
+
+.upNext .item .item__thumbnails {
+  /* grow = 1, shrink = 1, flex = 35% */
+  flex: 1 1 35%;
+  margin-right: var(--size-padding);
+}
+
+.upNext .item .item__thumbnails img {
+  width: 100%;
+}
+
+.upNext .item .item__info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.upNext .item .item__info .title {
+  font-size: var(--font-small);
+}
+
+.upNext .item .item__info .name,
+.upNext .item .item__info .views {
+  font-size: var(--font-micro);
+  color: var(--color-dark-grey);
+}
+.upNext .item .moreBtn {
+  flex: 1 1 5%;
+  height: 100%;
+}
+
+.infoAndUpNext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndUpNext {
+    flex-direction: row;
+  }
+
+  .upNext {
+    margin-top: calc(var(--size-padding) * 2);
+  }
+}

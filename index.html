@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="William" />
+    <meta name="description" content="Create UIs of the YouTube site" />
+    <script
+      src="https://kit.fontawesome.com/df08f33c0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>YouTube</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <i class="fab fa-youtube"></i>
+        <span class="title">YouTube</span>
+      </div>
+      <div class="icons">
+        <button class="searchBar">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="details">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Video Player -->
+    <section class="player">
+      <video controls src="video/video-placeholder.mov"></video>
+    </section>
+
+    <!-- Video Info -->
+    <div class="infoAndUpNext">
+      <section class="info">
+        <!-- Metadata -->
+        <div class="metadata">
+          <ul class="hashtags">
+            <li><a href="#">#YouTube</a></li>
+            <li><a href="#">#Clone</a></li>
+            <li><a href="#">#Coding</a></li>
+          </ul>
+          <div class="titleAndButton">
+            <span class="title clamp"
+              >Clone Coding: This project is to design YouTube UIs to practice
+              HTML and CSS. It was designed to start with the mobile view. Then,
+              it was considered the responsive website for the desktop view. The
+              video and thumbnails are replaced with placeholders
+            </span>
+            <button class="moreBtn">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+          <span class="views">108K views 1 month ago</span>
+        </div>
+
+        <!-- Actions -->
+        <ul class="actions">
+          <li>
+            <button>
+              <i class="active fas fa-thumbs-up"></i><span>425</span>
+            </button>
+          </li>
+          <li>
+            <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+          </li>
+          <li>
+            <button><i class="fas fa-share"></i><span>Share</span></button>
+          </li>
+          <li>
+            <button><i class="fas fa-plus"></i><span>Save</span></button>
+          </li>
+          <li>
+            <button>
+              <i class="fab fa-font-awesome-flag"></i><span>Report</span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- Channel Description -->
+        <div class="channel">
+          <div class="metadata">
+            <img src="imgs/avatar.jpg" alt="profile-William" />
+            <div class="channel__info">
+              <span class="name">William Kim</span>
+              <span class="subscribers">425K subscribers</span>
+            </div>
+          </div>
+          <button class="subscribe">subscribe</button>
+        </div>
+      </section>
+
+      <!-- Video UpNext -->
+      <section class="upNext">
+        <span class="title">Up next</span>
+        <ul>
+          <li class="item">
+            <!-- Image의 크기를 조정하기 위해서, div 박스 안에 넣어주기 -->
+            <div class="item__thumbnails">
+              <img src="imgs/placehold.jpeg" alt="First recommended video" />
+            </div>
+            <div class="item__info">
+              <span class="title"
+                >Clone Coding: Start with YouTube mobile view</span
+              >
+              <span class="name">William Kim</span>
+              <span class="views">108K views</span>
+            </div>
+            <button class="moreBtn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </li>
+          <li class="item">
+            <div class="item__thumbnails">
+              <img src="imgs/placehold.jpeg" alt="First recommended video" />
+            </div>
+            <div class="item__info">
+              <span class="title"
+                >Clone Coding: Start with YouTube mobile view</span
+              >
+              <span class="name">William Kim</span>
+              <span class="views">108K views</span>
+            </div>
+            <button class="moreBtn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </li>
+          <li class="item">
+            <div class="item__thumbnails">
+              <img src="imgs/placehold.jpeg" alt="First recommended video" />
+            </div>
+            <div class="item__info">
+              <span class="title"
+                >Clone Coding: Start with YouTube mobile view</span
+              >
+              <span class="name">William Kim</span>
+              <span class="views">108K views</span>
+            </div>
+            <button class="moreBtn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

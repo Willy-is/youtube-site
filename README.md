@@ -16,7 +16,7 @@ The wireframe was designed of the mobile view first. Then, it was considered to 
 
 ## Player
 
-In Player section, `controls` is used in the video placeholder.
+In Player section, `controls` is used in the video placeholder. Also, `position: sticky` is used to place the video on top while the screen is scrolling down.
 
 ## Info
 
